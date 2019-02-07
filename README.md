@@ -4,7 +4,7 @@
 
 **Itzel Enriquez**
 
-Mechatronics Engineering Studenrt
+Mechatronics Engineering Student
 21 years old 
 CETYS Universidad 
 
