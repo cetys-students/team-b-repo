@@ -9,5 +9,14 @@
 # return [0, 1].
 
 class Solution:
-        def twoSum(self, nums: 'List[int]', target: 'int') -> 'List[int]':
-                  pass
+    def twoSum(self, nums: 'List[int]', target: 'int') -> 'List[int]':
+        datos = {} #crea diccionarios
+        for i, num in enumerate(nums):
+            dif = target - num
+            if datos.get(num) is None:
+                datos[dif] = i
+            else:
+                return [datos[num], i]
+
+solution = Solution().twoSum([2, 11, 7, 15], 9)
+print(solution)
