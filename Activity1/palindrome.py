@@ -10,8 +10,18 @@
 # 
 # Input: "race a car"
 # Output: false
-
+import re
 class Solution:
         def isPalindrome(self, s: 'str') -> 'bool':
-                  pass
+            s = s.lower()
+            s = re.sub(r'\W+','', s)
+            ss = s[::-1]
+            if s == ss:
+                print(s, "is a palindrome")
+                return True
+            else:
+                print(s, "is not a palindrome")
+                return False
 
+
+solution = Solution().isPalindrome('race car')

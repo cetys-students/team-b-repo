@@ -11,9 +11,9 @@
 class Solution:
     def twoSum(self, nums: 'List[int]', target: 'int') -> 'List[int]':
         datos = {} #crea diccionarios
-        for i, num in enumerate(nums):
-            dif = target - num
-            if datos.get(num) is None:
+        for i, num in enumerate(nums): #cuenta posiciones
+            dif = target - num #resta
+            if datos.get(num) is None: #tomar un NUM de NUMS
                 datos[dif] = i
             else:
                 return [datos[num], i]
