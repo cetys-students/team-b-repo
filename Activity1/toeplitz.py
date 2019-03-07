@@ -6,7 +6,7 @@
 # Example 1:
 # 
 # Input:
-# matrix = [
+#  matrix = [
 #   [1,2,3,4],
 #   [5,1,2,3],
 #   [9,5,1,2]
@@ -35,4 +35,17 @@
 
 class Solution:
         def isToeplitzMatrix(self, matrix: 'List[List[int]]') -> 'bool':
-            pass
+            for i in range(0,len(matrix)-1):
+                for j in range(0,len(matrix[i])-1):
+                    v1 = matrix[i][j]
+                    v2 = matrix[i+1][j+1]
+                    if v1 != v2:
+                        return False
+            return True
+
+matrix = [
+   [1,2,3,4],
+   [5,1,2,3],
+   [9,5,9,2]
+]
+print(Solution().isToeplitzMatrix(matrix))
