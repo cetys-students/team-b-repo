@@ -1,0 +1,26 @@
+class Math:
+    def definite_integral(self samples, lower_limit, upper_limit, sampling_period):
+        if lower_limit == upper_limit:
+            return 0.0
+        if upper_limit >= len(samples):
+            return 0.0
+
+        sum = 0.5 * (samples[lower_limit] + samples[upper_limit])
+        for i in range(lower_limit + 1, upper_limit - 1):
+            value = samples[i]
+            sum += value
+        return sum * sampling_period
+
+    def sample_integral(self samples, sampling_period):
+        integral = []
+        value = samples[0]
+        sum = 0
+
+        for i in range(1, len(samples - 1)):
+            new_value = samples[i]
+            sum += 0.5 * sampling_period * (value + new_value)
+            integral.append(sum)
+            value = new_value
+
+
+        return integral
