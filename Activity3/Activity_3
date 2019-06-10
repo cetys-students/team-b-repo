@@ -22,5 +22,4 @@ class Math:
             integral.append(sum)
             value = new_value
 
-
         return integral
